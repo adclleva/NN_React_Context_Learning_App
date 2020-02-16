@@ -9,9 +9,13 @@ class ThemeContextProvider extends Component {
     dark: { syntax: '#ddd', ui: '#333', bg: '#555'}
   }
 
+  toggleTheme = () => {
+    this.setState({ isLightTheme: !this.state.isLightTheme })
+  }
+
   render() {
     return (
-      <ThemeContext.Provider value={{...this.state}}> {/* this is what will wrap our components */}
+      <ThemeContext.Provider value={{...this.state, toggleTheme: this.toggleTheme }}> {/* this is what will wrap our components */}
         {this.props.children} 
       </ThemeContext.Provider>
     )
