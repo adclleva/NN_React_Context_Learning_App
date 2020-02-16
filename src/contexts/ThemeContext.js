@@ -18,4 +18,4 @@ class ThemeContextProvider extends Component {
   }
 }
 
-export default ThemeContextProvider
+export default ThemeContextProvider 
