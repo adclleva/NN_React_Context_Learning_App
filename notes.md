@@ -8,3 +8,4 @@ which is an object
     
 static class field to initialize your contextType
 React will find the closest theme Provider above and use its value.
+
