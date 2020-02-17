@@ -1,6 +1,6 @@
-import React, { Component, createContext } from 'react'
+import React, { Component } from 'react'
 
-const { Provider, Consumer } = React.createContext()
+const AuthContext = React.createContext()
 
 class AuthContextProvider extends Component {
   state = {
@@ -13,11 +13,11 @@ class AuthContextProvider extends Component {
 
   render() {
     return (
-      <Provider value={{ ...this.state, toggleAuth: this.toggleAuth}}>
+      <AuthContext.Provider value={{ ...this.state, toggleAuth: this.toggleAuth}}>
         {this.props.children}
-      </Provider>
+      </AuthContext.Provider>
     )
   }
 }
 
-export { AuthContextProvider, Consumer as AuthContextConsumer }
+export { AuthContextProvider, AuthContext }
