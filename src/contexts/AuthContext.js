@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, createContext } from 'react'
 
-const AuthContext = React.createContext()
+const AuthContext = createContext() 
 
 class AuthContextProvider extends Component {
   state = {
